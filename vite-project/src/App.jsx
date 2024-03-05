@@ -1,5 +1,4 @@
 import './App.css'
-import {leaders} from './data.js'
 import { Link } from 'react-router-dom'
 
 function App() {
@@ -7,13 +6,7 @@ function App() {
   return (
     <>
       <h1>Ugandan presidents</h1>
-      <ul>
-        {leaders.map((leader)=>{
-          return <li key={leader.index}>
-            <Link to={`leader/${leader.index}`}>{leader.name}</Link>
-            </li>
-        })}
-      </ul>
+      <Link to='dashboard/leader/1'><button>Click here</button></Link>
     </>
   )
 }
